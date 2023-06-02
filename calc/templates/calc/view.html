@@ -1,0 +1,12 @@
+{% extends 'calc/base.html' %}
+
+{%block title%}
+View
+{%endblock%}
+
+{%block content%}
+<!--for loop which will loop thru all todo lists of a user-->
+    {%for td in user.todolist.all%}
+        <p><a href="/{{td.id}}">{{td.name}}</a></p>
+    {%endfor%}
+{%endblock%}

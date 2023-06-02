@@ -1,0 +1,21 @@
+{% extends 'calc/base.html' %}
+
+{%block title%}
+Create New List 
+{%endblock%}
+
+{%block content%}
+<h2>Create Page</h2>
+<form method="post" action="/create/" class="form-group">
+    {%csrf_token%}
+    <div class="input-group mb-3">
+    
+        <div class="input-group-prepend"> <!--button matches with the text input ie prepends it-->
+            <button type="submit" , name="save", class="btn btn-success">Create New</button>
+
+        </div>
+       
+       {{form.name}} <!--form.as_p removed since we just need the name-->
+    </div>
+</form>
+{%endblock%}
